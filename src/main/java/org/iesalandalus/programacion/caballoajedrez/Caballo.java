@@ -13,6 +13,15 @@ public class Caballo {
 		posicion = new Posicion(8, 'b');
 	}
 
+	public Caballo(Color color) {
+		if (color == Color.BLANCO) {
+			posicion = new Posicion(1, 'b');
+		}
+		if (color == Color.NEGRO) {
+			posicion = new Posicion(8, 'b');
+		}
+	}
+
 	public Color getColor() {
 		return color;
 	}
