@@ -4,6 +4,19 @@ public class Posicion {
 	private int fila;
 	private char columna;
 
+	public Posicion(int fila, char columna) {
+		if (fila < 1 || fila > 8) {
+			throw new IllegalArgumentException("El valor de la fila debe ser del 1 al 8.");
+		} else {
+			setFila(fila);
+		}
+		if (columna >= 'a' && columna <= 'h') {
+			setColumna(columna);
+		} else {
+			throw new IllegalArgumentException("El valor de la columna debe ser un caracter de la \"a\" a la \"h\".");
+		}
+	}
+
 	public void setFila(int fila) {
 		if (fila < 1 || fila > 8) {
 			throw new IllegalArgumentException("El valor de la fila debe ser del 1 al 8.");
