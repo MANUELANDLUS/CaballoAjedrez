@@ -35,6 +35,15 @@ public class Caballo {
 		}
 	}
 
+	// constructor copia
+	public Caballo(Caballo caballo) {
+		if (caballo == null) {
+			throw new IllegalArgumentException("No se puede copiar un caballo nulo");
+		}
+		this.color = caballo.getColor();
+		this.posicion = caballo.getPosicion();
+	}
+
 	public Color getColor() {
 		return color;
 	}
