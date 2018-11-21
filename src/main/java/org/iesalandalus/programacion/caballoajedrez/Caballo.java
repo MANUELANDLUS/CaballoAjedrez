@@ -8,6 +8,11 @@ public class Caballo {
 
 	// private static final String ERROR_MOVIMIENTO = "Movimiento no permitido: ";
 
+	public Caballo() {
+		color = Color.NEGRO;
+		posicion = new Posicion(8, 'b');
+	}
+
 	public Color getColor() {
 		return color;
 	}
