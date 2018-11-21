@@ -22,6 +22,19 @@ public class Caballo {
 		}
 	}
 
+	public Caballo(Color color, char columna) {
+		if (columna == 'b' || columna == 'g') {
+			if (color == Color.BLANCO) {
+				posicion = new Posicion(1, columna);
+			}
+			if (color == Color.NEGRO) {
+				posicion = new Posicion(8, columna);
+			}
+		} else {
+			throw new IllegalArgumentException("El valor inicial de la columna debe ser \"b\" o \"g\".");
+		}
+	}
+
 	public Color getColor() {
 		return color;
 	}
