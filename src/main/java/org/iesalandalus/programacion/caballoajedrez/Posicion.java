@@ -17,6 +17,14 @@ public class Posicion {
 		}
 	}
 
+	public Posicion(Posicion posicion) { // constructor copia
+		if (posicion == null) {
+			throw new IllegalArgumentException("No se puede copiar una posición con valor nulo");
+		}
+		this.fila = posicion.getFila();
+		this.columna = posicion.getColumna();
+	}
+
 	public void setFila(int fila) {
 		if (fila < 1 || fila > 8) {
 			throw new IllegalArgumentException("El valor de la fila debe ser del 1 al 8.");
