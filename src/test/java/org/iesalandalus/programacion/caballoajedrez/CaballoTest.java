@@ -78,7 +78,7 @@ public class CaballoTest {
 		}
 	}
 	
-	*/@Test
+	@Test
 	public void movimientoValidoTest() throws OperationNotSupportedException {
 		Caballo caballoNegroDefecto = new Caballo();
 		caballoNegroDefecto.mover(Direccion.ABAJO_IZQUIERDA);
@@ -99,83 +99,33 @@ public class CaballoTest {
 		assertEquals(new Posicion(8, 'b'), caballoNegroDefecto.getPosicion());
 	}
 	
-	/*@Test
-	public void movimientoNoValidoTest() {
+	*/@Test
+	public void movimientoNoValidoTest() throws OperationNotSupportedException {
 		Caballo caballoNegroDefecto = new Caballo();
 		Caballo caballoBlancoG = new Caballo(Color.BLANCO, 'g');
-		try {
-			caballoNegroDefecto.mover(Direccion.IZQUIERDA_ABAJO);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
-		}
-		try {
-			caballoNegroDefecto.mover(Direccion.IZQUIERDA_ARRIBA);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
-		}
-		try {
-			caballoNegroDefecto.mover(Direccion.ARRIBA_DERECHA);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
-		}
-		try {
-			caballoNegroDefecto.mover(Direccion.ARRIBA_IZQUIERDA);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
-		}
-		try {
-			caballoNegroDefecto.mover(Direccion.DERECHA_ARRIBA);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionDefectoNegro, caballoNegroDefecto.getPosicion());
-		}
-		try {
-			caballoBlancoG.mover(Direccion.IZQUIERDA_ABAJO);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
-		}
-		try {
-			caballoBlancoG.mover(Direccion.DERECHA_ABAJO);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
-		}
-		try {
-			caballoBlancoG.mover(Direccion.DERECHA_ARRIBA);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
-		}
-		try {
-			caballoBlancoG.mover(Direccion.ABAJO_DERECHA);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
-		}
-		try {
-			caballoBlancoG.mover(Direccion.ABAJO_IZQUIERDA);
-			fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
-		} catch (OperationNotSupportedException e) {
-			assertEquals("ERROR: Movimiento no válido.", e.getMessage());
-			assertEquals(posicionBlancoG, caballoBlancoG.getPosicion());
-		}
+		caballoNegroDefecto.mover(Direccion.IZQUIERDA_ABAJO);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoNegroDefecto.mover(Direccion.IZQUIERDA_ARRIBA);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoNegroDefecto.mover(Direccion.ARRIBA_DERECHA);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoNegroDefecto.mover(Direccion.ARRIBA_IZQUIERDA);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoNegroDefecto.mover(Direccion.DERECHA_ARRIBA);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoBlancoG.mover(Direccion.IZQUIERDA_ABAJO);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoBlancoG.mover(Direccion.DERECHA_ABAJO);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoBlancoG.mover(Direccion.DERECHA_ARRIBA);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoBlancoG.mover(Direccion.ABAJO_DERECHA);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
+		caballoBlancoG.mover(Direccion.ABAJO_IZQUIERDA);
+		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
 	}
 	
-	@Test
+	/*@Test
 	public void toStringTest() {
 		Caballo caballo = new Caballo();
 		assertEquals("Caballo [posición=[fila=8, columna=b], color=NEGRO]", caballo.toString());
