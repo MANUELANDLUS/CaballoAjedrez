@@ -6,8 +6,6 @@ public class Caballo {
 	private Color color;
 	private Posicion posicion;
 
-	// private static final String ERROR_MOVIMIENTO = "Movimiento no permitido: ";
-
 	public Caballo() {
 		color = Color.NEGRO;
 		posicion = new Posicion(8, 'b');
@@ -48,103 +46,66 @@ public class Caballo {
 		char letra;
 		letra = posicion.getColumna();
 
-		if (direccion == null) {
-			posicion.setFila(posicion.getFila());
-			posicion.setColumna(posicion.getColumna());
-		}
-
 		switch (direccion) {
 		case ARRIBA_IZQUIERDA:
-			if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
+			if ((posicion.getFila() >= 1 && posicion.getFila() <= 8) && (letra >= 'a' && letra <= 'h')) {
 				posicion.setFila(posicion.getFila() + 2);
-			} else {
-				throw new IllegalArgumentException("Movimiento no permitido.");
-			}
-			if (letra >= 'a' && letra <= 'h') {
 				posicion.setColumna((char) (letra - 1));
 			} else {
 				throw new IllegalArgumentException("Movimiento no permitido.");
 			}
 			break;
 		case ARRIBA_DERECHA:
-			if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
+			if ((posicion.getFila() >= 1 && posicion.getFila() <= 8) && (letra >= 'a' && letra <= 'h')) {
 				posicion.setFila(posicion.getFila() + 2);
-			} else {
-				throw new IllegalArgumentException("Movimiento no permitido.");
-			}
-			if (letra >= 'a' && letra <= 'h') {
 				posicion.setColumna((char) (letra + 1));
 			} else {
 				throw new IllegalArgumentException("Movimiento no permitido.");
 			}
 			break;
 		case DERECHA_ARRIBA:
-			if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
+			if ((posicion.getFila() >= 1 && posicion.getFila() <= 8) && (letra >= 'a' && letra <= 'h')) {
 				posicion.setFila(posicion.getFila() + 1);
-			} else {
-				throw new IllegalArgumentException("Movimiento no permitido.");
-			}
-			if (letra >= 'a' && letra <= 'h') {
 				posicion.setColumna((char) (letra + 2));
 			} else {
 				throw new IllegalArgumentException("Movimiento no permitido.");
 			}
 			break;
 		case DERECHA_ABAJO:
-			if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
+			if ((posicion.getFila() >= 1 && posicion.getFila() <= 8) && (letra >= 'a' && letra <= 'h')) {
 				posicion.setFila(posicion.getFila() - 1);
-			} else {
-				throw new IllegalArgumentException("Movimiento no permitido.");
-			}
-			if (letra >= 'a' && letra <= 'h') {
 				posicion.setColumna((char) (letra + 2));
 			} else {
 				throw new IllegalArgumentException("Movimiento no permitido.");
 			}
 			break;
 		case ABAJO_DERECHA:
-			if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
+			if ((posicion.getFila() >= 1 && posicion.getFila() <= 8) && (letra >= 'a' && letra <= 'h')) {
 				posicion.setFila(posicion.getFila() - 2);
-			} else {
-				throw new IllegalArgumentException("Movimiento no permitido.");
-			}
-			if (letra >= 'a' && letra <= 'h') {
 				posicion.setColumna((char) (letra + 1));
 			} else {
 				throw new IllegalArgumentException("Movimiento no permitido.");
 			}
 			break;
 		case ABAJO_IZQUIERDA:
-			if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
+			if ((posicion.getFila() >= 1 && posicion.getFila() <= 8) && (letra >= 'a' && letra <= 'h')) {
 				posicion.setFila(posicion.getFila() - 2);
-			} else {
-				throw new IllegalArgumentException("Movimiento no permitido.");
-			}
-			if (letra >= 'a' && letra <= 'h') {
 				posicion.setColumna((char) (letra - 1));
 			} else {
 				throw new IllegalArgumentException("Movimiento no permitido.");
 			}
 			break;
 		case IZQUIERDA_ARRIBA:
-			if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
+			if ((posicion.getFila() >= 1 && posicion.getFila() <= 8) && (letra >= 'a' && letra <= 'h')) {
 				posicion.setFila(posicion.getFila() + 1);
-			} else {
-				throw new IllegalArgumentException("Movimiento no permitido.");
-			}
-			if (letra >= 'a' && letra <= 'h') {
 				posicion.setColumna((char) (letra - 2));
 			} else {
 				throw new IllegalArgumentException("Movimiento no permitido.");
 			}
 			break;
 		case IZQUIERDA_ABAJO:
-			if (posicion.getFila() >= 1 && posicion.getFila() <= 8) {
+			if ((posicion.getFila() >= 1 && posicion.getFila() <= 8) && (letra >= 'a' && letra <= 'h')) {
 				posicion.setFila(posicion.getFila() - 1);
-			} else {
-				throw new IllegalArgumentException("Movimiento no permitido.");
-			}
-			if (letra >= 'a' && letra <= 'h') {
 				posicion.setColumna((char) (letra - 2));
 			} else {
 				throw new IllegalArgumentException("Movimiento no permitido.");
@@ -208,7 +169,7 @@ public class Caballo {
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Caballo [color=" + color + ", posicion=" + posicion + "]";
