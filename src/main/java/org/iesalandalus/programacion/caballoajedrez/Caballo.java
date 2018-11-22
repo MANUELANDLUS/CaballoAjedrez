@@ -18,6 +18,7 @@ public class Caballo {
 		if (color == Color.NEGRO) {
 			posicion = new Posicion(8, 'b');
 		}
+		setColor(color);
 	}
 
 	public Caballo(Color color, char columna) {
@@ -28,6 +29,7 @@ public class Caballo {
 			if (color == Color.NEGRO) {
 				posicion = new Posicion(8, columna);
 			}
+			setColor(color);
 		} else {
 			throw new IllegalArgumentException("El valor inicial de la columna debe ser \"b\" o \"g\".");
 		}
