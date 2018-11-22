@@ -6,15 +6,15 @@ import org.junit.Test;
 
 public class PosicionTest {
 
-	@Test
+	/*@Test
 	public void constructorValidoTest() {
 		Posicion posicion;
 		posicion = new Posicion(1, 'a');
 		assertEquals(1, posicion.getFila());
 		assertEquals('a', posicion.getColumna());
-	}
+	}*/
 	
-	/*@Test
+	@Test
 	public void constructorNoValidoTest() {
 		Posicion posicion = null;
 		try {
@@ -32,7 +32,7 @@ public class PosicionTest {
 			assertEquals("ERROR: Columna no válida.", e.getMessage());
 			assertNull(posicion);
 		}
-	}*/
+	}
 	
 	/*@Test
 	public void constructorCopiaTest() {
