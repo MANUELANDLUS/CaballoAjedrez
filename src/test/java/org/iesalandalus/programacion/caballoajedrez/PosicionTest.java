@@ -34,7 +34,7 @@ public class PosicionTest {
 		}
 	}*/
 	
-	@Test
+	/*@Test
 	public void constructorCopiaTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		Posicion nuevaPosicion = new Posicion(posicion);
@@ -46,9 +46,9 @@ public class PosicionTest {
 			assertEquals("ERROR: No es posible copiar una posición nula.", e.getMessage());
 			assertEquals(posicion, nuevaPosicion);
 		}
-	}
+	}*/
 	
-	/*@Test
+	@Test
 	public void setFilaNoValidaTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		try {
@@ -65,7 +65,7 @@ public class PosicionTest {
 			assertEquals("ERROR: Fila no válida.", e.getMessage());
 			assertEquals(1, posicion.getFila());
 		}
-	}*/
+	}
 	
 	/*@Test
 	public void setColumnaNoValidaTest() {
