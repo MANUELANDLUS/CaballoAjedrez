@@ -78,10 +78,10 @@ public class CaballoTest {
 		}
 	}
 	
-	@Test
-	public void movimientoValidoTest() throws OperationNotSupportedException {
-		Caballo caballoNegroDefecto = new Caballo();
-		caballoNegroDefecto.mover(Direccion.ABAJO_IZQUIERDA);
+	*/@Test
+    public void movimientoValidoTest() throws OperationNotSupportedException {
+        Caballo caballoNegroDefecto = new Caballo();
+        caballoNegroDefecto.mover(Direccion.ABAJO_IZQUIERDA);
 		assertEquals(new Posicion(6, 'a'), caballoNegroDefecto.getPosicion());
 		caballoNegroDefecto.mover(Direccion.ABAJO_DERECHA);
 		assertEquals(new Posicion(4, 'b'), caballoNegroDefecto.getPosicion());
@@ -97,9 +97,9 @@ public class CaballoTest {
 		assertEquals(new Posicion(7, 'd'), caballoNegroDefecto.getPosicion());
 		caballoNegroDefecto.mover(Direccion.IZQUIERDA_ARRIBA);
 		assertEquals(new Posicion(8, 'b'), caballoNegroDefecto.getPosicion());
-	}
+    }
 	
-	@Test
+	/*@Test
 	public void movimientoNoValidoTest() throws OperationNotSupportedException {
 		Caballo caballoNegroDefecto = new Caballo();
 		Caballo caballoBlancoG = new Caballo(Color.BLANCO, 'g');
@@ -125,10 +125,10 @@ public class CaballoTest {
 		fail("Debería haber saltado una excepción indicando que el movimiento no es válido.");
 	}
 	
-	*/@Test
+	@Test
 	public void toStringTest() {
 		Caballo caballo = new Caballo();
 		assertEquals("Caballo [posición=[fila=8, columna=b], color=NEGRO]", caballo.toString());
-	}
+	}*/
 
 }
