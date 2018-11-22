@@ -48,7 +48,7 @@ public class PosicionTest {
 		}
 	}*/
 	
-	@Test
+	/*@Test
 	public void setFilaNoValidaTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		try {
@@ -65,9 +65,9 @@ public class PosicionTest {
 			assertEquals("ERROR: Fila no válida.", e.getMessage());
 			assertEquals(1, posicion.getFila());
 		}
-	}
+	}*/
 	
-	/*@Test
+	@Test
 	public void setColumnaNoValidaTest() {
 		Posicion posicion = new Posicion(1, 'a');
 		try {
@@ -84,7 +84,7 @@ public class PosicionTest {
 			assertEquals("ERROR: Columna no válida.", e.getMessage());
 			assertEquals('a', posicion.getColumna());
 		}
-	}*/
+	}
 	
 	/*@Test
 	public void igualdadTest() {
